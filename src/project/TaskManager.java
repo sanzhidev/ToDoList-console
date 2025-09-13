@@ -39,7 +39,7 @@ public class TaskManager {
     //удалить задачу4
     public void removeTask(int id){
         tasks.removeIf(task -> task.getId() == id);
-        System.out.println("Если задача с id " + id + "сущестовала - она удалена ");
-    }
+        System.out.println("Если задача с id " + id + "сущестовала - она удалена");
 
+    }
 }
