@@ -28,7 +28,7 @@ public class TaskManager {
     public void markAsDone(int id){
         for(Task task : tasks){
             if(task.getId() == id){
-                task.markAsDone();
+                task.markAsCompleted();
                 System.out.println("Задача " +id + "отмечена выполненой");
                 return;
             }

@@ -29,8 +29,9 @@ public class Main {
                 case 2 -> manager.showTasks();
                 case 3 -> {
                     System.out.println("Введите id задачи");
-                    int id = scanner.nextInt();
-                    manager.removeTask(id);
+                    int doneId = scanner.nextInt();
+                    manager.markAsDone(doneId);
+                    break;
 
                 }
 

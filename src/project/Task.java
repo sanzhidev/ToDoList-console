@@ -3,7 +3,14 @@ package project;
 public class Task {
     private int id;
     private String title;
-    private boolean isDone;
+    private boolean completed;
+
+    public Task(int id, String title) {
+        this.id = id;
+        this.title = title;
+        this.completed = false;
+    }
+
 
 
     public int getId() {
@@ -14,25 +21,17 @@ public class Task {
         return title;
     }
 
-    public boolean isDone() {
-        return isDone;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public  Task(int id, String title) {
-        this.id = id;
-        this.title = title;
-        this.isDone = false;
+    public void markAsCompleted(){
+        this.completed = true;
     }
-
-
-    public void markAsDone() {
-        this.isDone = true;
-    }
-
 
     @Override
     public String toString() {
-        return id + ". " + title + " (выполнена: " + isDone + ")";
+        return id + ". " + title + " (выполнена: " + completed + ")";
     }
 }
 
